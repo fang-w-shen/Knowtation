@@ -1,0 +1,18 @@
+<div class="col s12 m7">
+  <h2 class="header">{{title}}</h2>
+    <div class="card horizontal">
+      <div class="card-image"></div>
+      <div class="card-stacked"><i class="material-icons left" style="font-size:4rem;">assignment</i>
+        <div class="card-content">
+          <h2>Note</h2>
+          <hr>
+          <input type="text" ng-model="note.task" autofocus="true" placeholder="Enter Your Note...">
+          <h3>Description</h3>
+          <input type="text" ng-model="note.description" placeholder="Note Description...">
+        </div>
+        <div class="card-action">
+          <button class="btn btn-success" ng-click="addNote(note)">Save</button>
+        </div>
+      </div>
+    </div>
+</div>

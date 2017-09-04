@@ -1,0 +1,23 @@
+<div class="col s12 m7">
+    <h2 class="header">My {{title}}</h2>
+    <h2 class="addingnewnote" style="visibility:hidden;">Add A New Note First!</h2>
+      <div class="card horizontal" ng-repeat="(key, note) in notes | orderBy:'time'">
+        
+        <div class="card-image"></div>
+        <div class="card-stacked"><i class="material-icons left" style="font-size:4rem;">assignment</i>
+          <div class="card-content">
+            <h2>Note: #{{key +1}}</h2>
+            <hr>
+            <p>{{note.task}}</p>
+            <hr>
+            <h3>Description</h3>
+            <p>{{note.description}}</p>
+            <p>{{note.time}}</p>
+          </div>
+          <div class="card-action">
+            <a class="btn btn-info" ng-href="#!/notes/{{note.key}}/edit" ng-click="showEditNote(note.key)">Edit</a>
+            <button class="btn btn-danger" ng-click="deleteNote(note.key)">Delete</button>
+          </div>
+        </div>
+      </div>
+  </div

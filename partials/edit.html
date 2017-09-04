@@ -1,0 +1,19 @@
+<div class="col s12 m7">
+  <h2 class="header">Edit Note</h2>
+    <div class="card horizontal">
+      <div class="card-image"></div>
+      <div class="card-stacked"><i class="material-icons left" style="font-size:4rem;">assignment</i>
+        <div class="card-content">
+          <h2>Note</h2>
+          <hr>
+          <input type="text" ng-model="note[0].task" autofocus="true" value="note.task">
+          <h3>Description</h3>
+          <input type="text" ng-model="note[0].description" value="note.description">
+        </div>
+        <div class="card-action">
+ 
+          <button class="btn btn-success" ng-click="editNote(note[0])">Edit</button>
+        </div>
+      </div>
+    </div>
+</div>
