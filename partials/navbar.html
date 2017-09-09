@@ -24,7 +24,12 @@
       </ul>
       <ul class="side-nav" id="mobile-demo">
         <li><a href="#!/home">Home</a></li>
-        <li><a href="#!/notes">Notes</a></li>
+        <li><a href="#!/register" ng-show="!loggedIn"> Register</a></li>
+        <li><a href="#!/notes" ng-show="loggedIn" id="noteButton">Notes</a></li>
+        <li><a href="#!/new" ng-show="loggedIn">Add Note</a></li>
+        <li><a href="#!/login" ng-show="!loggedIn">Sign In E-Mail</a></li>
+        <li><a href="" ng-click="loginGoogle()" ng-show="!loggedIn">Sign In Google</a></li>
+        <li><a href="#!/home" ng-show="loggedIn" ng-click="logoutUser()">Logout</a></li>
       </ul>
     </div>
   </nav>
