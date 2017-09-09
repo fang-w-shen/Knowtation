@@ -2,7 +2,7 @@
 angular.module('myApp').controller("EditCtrl", function($q,$http,$scope,$route, NotesFactory,$window, $location, firebaseInfo,AuthFactory,$routeParams){
 
   let key = $routeParams.notetask;
-  
+  console.log("what is my DAMN KEY",key);
   function showNote() {
       $q( (resolve, reject) => {
             $http.get(`${firebaseInfo.databaseURL}/notes/${key}.json`)

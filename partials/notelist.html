@@ -1,7 +1,9 @@
+<input id="searchbox" type="text" class="form-control" placeholder="Search" ng-model="searchText">
+
 <div class="col s12 m7">
     <h2 class="header">My {{title}}</h2>
     <h2 class="addingnewnote" style="visibility:hidden;">Add A New Note First!</h2>
-      <div class="card horizontal" ng-repeat="(key, note) in notes | orderBy:'time'">
+      <div class="card horizontal" ng-repeat="(key, note) in notes | orderBy:'time' | filter: {task:searchText}" >
         
         <div class="card-image"></div>
         <div class="card-stacked"><i class="material-icons left" style="font-size:4rem;">assignment</i>

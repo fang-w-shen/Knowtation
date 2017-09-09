@@ -1,19 +1,20 @@
 "use strict";
 angular.module('myApp', ['ngRoute']);
-let isAuth = (AuthFactory,$location,$route) => {
-    return new Promise((resolve,reject)=>{
-        let truth = AuthFactory.isAuthenticated();
-        if (truth){
-            resolve();
-        } else {
 
-        $location.url("/home");
-            
-        }
-    });
-};
-    
 angular.module('myApp').config(function ($routeProvider) {
+    let isAuth = (AuthFactory,$location,$route) => {
+        return new Promise((resolve,reject)=>{
+            let truth = AuthFactory.isAuthenticated();
+            if (truth){
+                resolve();
+            } else {
+
+            $location.url("/home");
+                
+            }
+        });
+    };
+
     $routeProvider
         .when('/register', {
             templateUrl: 'partials/register.html',

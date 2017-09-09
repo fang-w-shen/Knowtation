@@ -1,7 +1,6 @@
 "use strict";
 angular.module('myApp').controller("NoteCtrl", function($q,$http,$scope,$route, NotesFactory,$window, $location, firebaseInfo,AuthFactory,$routeParams){
   let userId = firebase.auth().currentUser.uid;
-
   $scope.title = "Notes";
 
 
