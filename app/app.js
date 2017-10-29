@@ -27,8 +27,7 @@ angular.module('myApp').config(function ($routeProvider) {
             controller: 'AuthCtrl'
         }).when('/notes', {
             templateUrl: 'partials/notelist.html',
-            controller: "NoteCtrl",
-            resolve: {isAuth}
+            controller: "NoteCtrl"
         }).when('/notes/:notetask/edit', {
             templateUrl: 'partials/edit.html',
             controller: "EditCtrl",
