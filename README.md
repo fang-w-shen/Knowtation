@@ -1,4 +1,4 @@
-# Modern-Frameworks-Notes-App-W-Firebase-Authentication
+# Knowtation - Angular Notes Taking App
 
 **[VIEW LIVE](https://fang-w-shen.github.io/Knowtation)**
 
